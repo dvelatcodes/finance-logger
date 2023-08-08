@@ -8,10 +8,26 @@
   top: 1.1rem;
   cursor: pointer;
 }
-img{
+/* img{
   width: 1.5rem;
   height: 1.5rem;
   background-color: white;
+} */
+.first{
+  background-image: url("./assets/dark-mode.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.second{
+  background-image: url("./assets/light-mode.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .wrapper{
   max-width: 960px;
