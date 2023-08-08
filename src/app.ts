@@ -1,3 +1,4 @@
+console.log("before");
 import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
 import { HtmlTemplate } from "./classes/HtmlTemplate.js";
@@ -18,9 +19,11 @@ const btn = document.querySelector("button")!;
 
 const ul = document.querySelector("ul")!;
 const outPut = new HtmlTemplate(ul);
+console.log("after");
 
 form.addEventListener("submit", (e : Event)=>{
     e.preventDefault();
+    console.log("enter");
     let typeOf: Formatter;
     if (select.value === "invoice")
     {

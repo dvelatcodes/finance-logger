@@ -1,3 +1,4 @@
+console.log("before");
 import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
 import { HtmlTemplate } from "./classes/HtmlTemplate.js";
@@ -14,8 +15,10 @@ const price = document.querySelector("#amount");
 const btn = document.querySelector("button");
 const ul = document.querySelector("ul");
 const outPut = new HtmlTemplate(ul);
+console.log("after");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log("enter");
     let typeOf;
     if (select.value === "invoice") {
         typeOf = new Invoice(client.value, description.value, price.valueAsNumber);
