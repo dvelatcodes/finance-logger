@@ -1,7 +1,48 @@
-console.log("before");
-import { Invoice } from "./classes/Invoice.js";
-import { Payment } from "./classes/Payment.js";
-import { HtmlTemplate } from "./classes/HtmlTemplate.js";
+"use strict";
+// console.log("before");
+// import { Invoice } from "./classes/Invoice.js";
+// import { Payment } from "./classes/Payment.js";
+// import { HtmlTemplate } from "./classes/HtmlTemplate.js";
+// import { Formatter } from "./interface/Formatter.js";
+class Invoice {
+    constructor(client, detail, price) {
+        this.client = client;
+        this.detail = detail;
+        this.price = price;
+    }
+    format() {
+        return (`${this.client}'s ${this.detail} ${this.price} is valid`);
+    }
+}
+class Payment {
+    constructor(client, detail, price) {
+        this.client = client;
+        this.detail = detail;
+        this.price = price;
+    }
+    format() {
+        return (`${this.client}'s ${this.detail} ${this.price} euro`);
+    }
+}
+class HtmlTemplate {
+    constructor(ul) {
+        this.ul = ul;
+    }
+    render(item, head, type) {
+        const li = document.createElement("li");
+        const h4 = document.createElement("h4");
+        h4.innerText = head;
+        const p = document.createElement("p");
+        p.innerText = item.format();
+        li.append(h4);
+        li.append(p);
+        if (type === "start")
+            this.ul.prepend(li);
+        else {
+            this.ul.append(li);
+        }
+    }
+}
 const icon = document.querySelector(".imgCover");
 const img = document.querySelector("img");
 const body = document.querySelector("body");

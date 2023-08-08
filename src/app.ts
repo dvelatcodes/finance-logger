@@ -1,8 +1,46 @@
-console.log("before");
-import { Invoice } from "./classes/Invoice.js";
-import { Payment } from "./classes/Payment.js";
-import { HtmlTemplate } from "./classes/HtmlTemplate.js";
-import { Formatter } from "./interface/Formatter.js";
+// console.log("before");
+// import { Invoice } from "./classes/Invoice.js";
+// import { Payment } from "./classes/Payment.js";
+// import { HtmlTemplate } from "./classes/HtmlTemplate.js";
+// import { Formatter } from "./interface/Formatter.js";
+
+interface Formatter{
+    format(): string
+}
+
+class Invoice implements Formatter {
+    constructor(public client:string, public detail:string, public price:number){}
+    format()
+    {
+        return(`${this.client}'s ${this.detail} ${this.price} is valid`)
+    }
+}
+
+class Payment implements Formatter {
+    constructor(public client:string, public detail:string, public price:number){}
+    format()
+    {
+        return(`${this.client}'s ${this.detail} ${this.price} euro`)
+    }
+}
+
+class HtmlTemplate{
+constructor(private ul : HTMLUListElement){}
+render(item:Formatter,head:string,type: "start" | "end")
+    {
+        const li = document.createElement("li");
+        const h4 = document.createElement("h4");
+        h4.innerText = head;
+        const p = document.createElement("p");
+        p.innerText = item.format();
+        li.append(h4);
+        li.append(p);
+        if(type === "start") this.ul.prepend(li)
+        else{
+            this.ul.append(li)
+        } 
+    }
+}
 
 const icon = document.querySelector(".imgCover") as HTMLDivElement;
 const img = document.querySelector("img")!;

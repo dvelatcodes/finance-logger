@@ -1,10 +1,9 @@
-export class Invoice {
-    constructor(client, detail, price) {
-        this.client = client;
-        this.detail = detail;
-        this.price = price;
-    }
-    format() {
-        return (`${this.client}'s ${this.detail} ${this.price} is valid`);
-    }
-}
+"use strict";
+// import { Formatter } from "../interface/Formatter.js";
+// export class Invoice implements Formatter {
+//     constructor(public client:string, public detail:string, public price:number){}
+//     format()
+//     {
+//         return(`${this.client}'s ${this.detail} ${this.price} is valid`)
+//     }
+// }

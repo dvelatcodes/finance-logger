@@ -1,3 +1,3 @@
-export interface Formatter{
-    format(): string
-}
+// export interface Formatter{
+//     format(): string
+// }
