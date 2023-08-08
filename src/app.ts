@@ -2,6 +2,12 @@ const icon = document.querySelector(".imgCover") as HTMLDivElement;
 const img = document.querySelector("img")!;
 const body = document.querySelector("body")!;
 const footer = document.querySelector("footer")!;
+const form = document.querySelector("form")!;
+const select = document.querySelector("select")!;
+const client = document.querySelector("#tofrom") as HTMLInputElement;
+const description = document.querySelector("#details") as HTMLInputElement;
+const price = document.querySelector("#amount") as HTMLInputElement;
+const btn = document.querySelector("button")!;
 
 icon.addEventListener("click", ()=>{
     if(img.alt === "dark-mode icon")
