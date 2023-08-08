@@ -101,4 +101,5 @@ button{
   min-width: 80px;
   border-radius: 4px;
   animation: bgReflect 1.2s infinite ease-in-out;
+  cursor: pointer;
 }
