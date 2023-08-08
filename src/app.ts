@@ -27,3 +27,8 @@ icon.addEventListener("click", ()=>{
     }
 })
 
+form.addEventListener("submit", (e : Event)=>{
+    e.preventDefault();
+    
+})
+
