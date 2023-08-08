@@ -6,6 +6,30 @@ h1{
   margin: 40px auto;
   color: #e60aff;
   text-align: center;
+  animation: colorReflect 1.2s infinite ease-in-out;
+}
+
+@keyframes colorReflect {
+  0%{
+    color: #e60aff;
+  }
+  50%{
+    color: #ff0a9d;
+  }
+  100%{
+    color: #e60aff;
+  }
+}
+@keyframes bgReflect {
+  0%{
+    background: #e60aff;
+  }
+  50%{
+    background: #ff0a9d;
+  }
+  100%{
+    background: #e60aff;
+  }
 }
 ul{
   padding: 0;
@@ -60,6 +84,7 @@ button{
   padding: 6px;
   min-width: 80px;
   border-radius: 4px;
+  animation: bgReflect 1.2s infinite ease-in-out;
 }
 footer a{
   text-align: center;
