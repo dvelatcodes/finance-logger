@@ -1,3 +1,22 @@
+body{
+  /* background-color: #000000; */
+  /* background-color: white; */
+}
+.imgCover{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 1.1rem;
+  cursor: pointer;
+}
+img{
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+}
 .wrapper{
   max-width: 960px;
   margin: 0 auto;
@@ -51,6 +70,7 @@ li p{
 }
 footer{
   background: #eee;
+  /* background: #b8b8b8; */
   box-shadow: 1px 1px 10px 3px #d8d8d8;
   padding: 60px;
   margin-top: 60px;
@@ -85,11 +105,4 @@ button{
   min-width: 80px;
   border-radius: 4px;
   animation: bgReflect 1.2s infinite ease-in-out;
-}
-footer a{
-  text-align: center;
-  display: block;
-  color: #999;
-  margin-top: 40px;
-  font-size: 0.7em;
 }
