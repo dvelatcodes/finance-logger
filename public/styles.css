@@ -4,7 +4,7 @@
 }
 h1{
   margin: 40px auto;
-  color: #ff0aa7;
+  color: #e60aff;
   text-align: center;
 }
 ul{
@@ -17,7 +17,7 @@ li{
   margin: 10px auto;
 }
 li h4{
-  color: #ff0aa7;
+  color: #e60aff;
   margin: 0;
   text-transform: capitalize;
 }
@@ -27,6 +27,7 @@ li p{
 }
 footer{
   background: #eee;
+  box-shadow: 1px 1px 10px 3px #d8d8d8;
   padding: 60px;
   margin-top: 60px;
 }
@@ -46,15 +47,16 @@ input, select{
   padding: 6px;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  box-shadow: 2px 2px 7px #999999;
 }
 .field{
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 10px 10px 0;
 }
 button{
   color: white;
   border: 0;
-  background: #ff0aa7;
+  background: #e60aff;
   padding: 6px;
   min-width: 80px;
   border-radius: 4px;
